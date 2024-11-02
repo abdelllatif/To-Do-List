@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.7/css/boxicons.min.css" rel="stylesheet">
+  <title>About Us</title>
+ 
+</head>
+<body class="bg-gray-200 flex flex-col min-h-screen">
+
+  <nav class="bg-blue-600 shadow">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center text-white">
+      <div class="flex items-center">
+        <img src="img/read.png" alt="Logo" class="h-10 mr-3">
+        <h1 class="text-xl font-bold">My To-Do List</h1>
+      </div>
+      <div class="hidden md:flex space-x-4">
+        <a href="index.html" class="font-bold hover:text-gray-200">Home</a>
+        <a href="tasks.html" class="font-bold hover:text-gray-200">Tasks</a>
+        <a href="about.html" class="font-bold hover:text-gray-200">About Us</a>
+      </div>
+      <div class="md:hidden">
+        <button onclick="toggleMenu()" class="text-white">
+          <i class="bx bx-menu text-3xl"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="mobileMenu" class="fixed top-0 right-0 h-full w-64 bg-blue-600 text-white transform translate-x-full transition-transform duration-300 z-40">
+    <div class="p-4 flex justify-end">
+      <button onclick="toggleMenu()" class="text-white">
+        <i class="bx bx-x text-3xl"></i>
+      </button>
+    </div>
+    <div class="flex flex-col space-y-4 p-4">
+      <a href="index.html" class="hover:text-gray-200">Home</a>
+      <a href="tasks.html" class="hover:text-gray-200">Tasks</a>
+      <a href="about.html" class="hover:text-gray-200">About Us</a>
+    </div>
+  </div>
+
+  <section class="flex-grow flex items-center justify-center mt-10 md:mt-32 p-4">
+    <div class="bg-gray-100 p-8 rounded-lg shadow-2xl w-full max-w-4xl flex flex-col items-center text-center">
+      <h1 class="text-4xl font-bold text-blue-600 mb-4">About Our To-Do List</h1>
+      <img class="w-24 h-28 mb-4" src="img/about.png" alt="About Image">
+      <p class="text-gray-700 font-medium max-w-2xl">
+        To-Do List created to simplify task management for everyone. Launched in 2024, our platform aims to help users
+        prioritize their responsibilities, reduce stress, and enhance productivity. With an intuitive interface, you can
+        easily add, organize, and track your tasks, whether they are personal errands or professional projects. We believe
+        that effective task management is key to achieving your goals, and we're here to support you every step of the way!
+      </p>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-white text-center h-72 mt-40 py-20 text-2xl flex items-center">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-center space-x-4 mb-4">
+        <a href="#" class="hover:text-gray-300"><i class="bx bxl-facebook-square text-2xl"></i></a>
+        <a href="#" class="hover:text-gray-300"><i class="bx bxl-twitter text-2xl"></i></a>
+        <a href="#" class="hover:text-gray-300"><i class="bx bxl-linkedin-square text-2xl"></i></a>
+        <a href="#" class="hover:text-gray-300"><i class="bx bxl-instagram text-2xl"></i></a>
+      </div>
+      <div class="flex justify-center space-x-4 mb-4 text-2xl">
+        <a href="#" class="hover:text-gray-300">Privacy Policy</a>
+        <span>|</span>
+        <a href="#" class="hover:text-gray-300">Terms of Service</a>
+        <span>|</span>
+        <a href="about.html" class="hover:text-gray-300">About Us</a>
+      </div>
+      <p class="text-2xl text-gray-400">© 2024 My To-Do List. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const mobileMenu = document.getElementById("mobileMenu");
+      mobileMenu.classList.toggle("translate-x-full");
+    }
+  </script>
+
+</body>
+</html>

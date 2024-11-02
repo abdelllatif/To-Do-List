@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.7/css/boxicons.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Home - My To-Do List</title>
+</head>
+<body class="bg-gray-200 flex flex-col min-h-screen">
+  <nav class="bg-blue-600 shadow">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center text-white">
+      <div class="flex items-center">
+        <img src="img/read.png" alt="Logo" class="h-10 mr-3">
+        <h1 class="text-xl font-bold">My To-Do List</h1>
+      </div>
+      <div class="hidden md:flex space-x-4">
+        <a href="index.html" class="font-bold hover:text-gray-200">Home</a>
+        <a href="tasks.html" class="font-bold hover:text-gray-200">Tasks</a>
+        <a href="about.html" class="font-bold hover:text-gray-200">About Us</a>
+      </div>
+      <div class="md:hidden">
+        <button onclick="toggleMenu()" class="text-white">
+          <i class="bx bx-menu text-3xl"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="mobileMenu" class="fixed top-0 right-0 h-full w-64 bg-blue-600 text-white transform translate-x-full transition-transform duration-300 z-40">
+    <div class="p-4 flex justify-end">
+      <button onclick="toggleMenu()" class="text-white">
+        <i class="bx bx-x text-3xl"></i>
+      </button>
+    </div>
+    <div class="flex flex-col space-y-4 p-4">
+      <a href="index.html" class="hover:text-gray-200">Home</a>
+      <a href="tasks.html" class="hover:text-gray-200">Tasks</a>
+      <a href="about.html" class="hover:text-gray-200">About Us</a>
+    </div>
+  </div>
+
+
+  <main class="flex-grow pt-20 bg-cover bg-center relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-blue-900 to-blue-500 opacity-70"></div>
+    <section class="text-white py-32 text-center relative z-10 px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">Manage Your Tasks Efficiently</h2>
+      <p class="text-lg sm:text-xl lg:text-2xl mb-6">Stay organized and increase productivity with ease.</p>
+      <a href="tasks.html" class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-800 text-lg sm:text-xl">Get Started</a>
+    </section>
+  </main>
+
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white text-gray-700">
+    <h3 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-10 text-blue-600">Our Features</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+      <div class="p-6 bg-gray-100 rounded-lg shadow-md text-center">
+        <i class="bx bxs-pencil text-6xl text-blue-600 mb-4"></i>
+        <h4 class="text-xl font-semibold mb-2">Easy Task Management</h4>
+        <p class="text-lg">Quickly add, edit, and organize your tasks in a few clicks.</p>
+      </div>
+      <div class="p-6 bg-gray-100 rounded-lg shadow-md text-center">
+        <i class="bx bxs-bar-chart-alt-2 text-6xl text-green-600 mb-4"></i>
+        <h4 class="text-xl font-semibold mb-2">Boost Your Productivity</h4>
+        <p class="text-lg">Organize tasks by priority and stay on top of your goals.</p>
+      </div>
+      <div class="p-6 bg-gray-100 rounded-lg shadow-md text-center">
+        <i class="bx bxs-calendar-check text-6xl text-red-600 mb-4"></i>
+        <h4 class="text-xl font-semibold mb-2">Track Progress</h4>
+        <p class="text-lg">Monitor each task's progress by marking its status.</p>        
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-blue-500 text-white py-20">
+    <div class="max-w-7xl mx-auto text-center px-4">
+      <h3 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">Ready to Take Control?</h3>
+      <p class="text-lg sm:text-xl lg:text-2xl mb-6">Join thousands of users who have organized their lives with My To-Do List.</p>
+      <a href="tasks.html" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 text-lg sm:text-xl">Start Tasks Now</a>
+    </div>
+  </section>
+
+ <footer class="bg-gray-900 text-white text-center h-72 mt-40 py-6 text-2xl flex items-center">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex justify-center space-x-4 mb-4">
+      <a href="#" class="hover:text-gray-300"><i class="bx bxl-facebook-square text-2xl"></i></a>
+      <a href="#" class="hover:text-gray-300"><i class="bx bxl-twitter text-2xl"></i></a>
+      <a href="#" class="hover:text-gray-300"><i class="bx bxl-linkedin-square text-2xl"></i></a>
+      <a href="#" class="hover:text-gray-300"><i class="bx bxl-instagram text-2xl"></i></a>
+    </div>
+    <div class="flex justify-center space-x-4 mb-4 text-2xl">
+      <a href="#" class="hover:text-gray-300">Privacy Policy</a>
+      <span>|</span>
+      <a href="#" class="hover:text-gray-300">Terms of Service</a>
+      <span>|</span>
+      <a href="about.html" class="hover:text-gray-300">About Us</a>
+    </div>
+    <p class="text-2xl text-gray-400">© 2024 My To-Do List. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script src="test.js">
+  </script>
+</body>
+</html>
