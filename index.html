@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Home - My To-Do List</title>
 </head>
-<body class="bg-gray-200 flex flex-col min-h-screen">
+<body class="bg-gray-50 flex flex-col min-h-screen">
   <nav class="bg-blue-600 shadow">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center text-white">
       <div class="flex items-center">
@@ -40,9 +40,12 @@
     </div>
   </div>
   <main class="flex-grow pt-20 relative">
+    <!-- Background gradient -->
     <div class="z-20 absolute inset-0 bg-gradient-to-b from-blue-900 to-blue-500 opacity-70"></div>
+    <!-- Background image -->
     <div class="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url('img/desctop.jpg')]"></div>
-    <section class="text-white py-32 text-center relative  px-4 sm:px-6 z-30 lg:px-8">
+    
+    <section class="text-white py-32 text-center relative z-30 px-4 sm:px-6 lg:px-8">
       <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">Manage Your Tasks Efficiently</h2>
       <p class="text-lg sm:text-xl lg:text-2xl mb-6">Stay organized and increase productivity with ease.</p>
       <a href="tasks.html" class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-800 text-lg sm:text-xl">Get Started</a>
@@ -50,20 +53,20 @@
   </main>
   
 
-  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white text-gray-700">
+  <section class="py-20 px-4 sm:px-6 lg:px-8 text-gray-700">
     <h3 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-10 text-blue-600">Our Features</h3>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
-      <div class="p-6 bg-gray-100 rounded-lg shadow-md text-center">
+      <div class="p-6 bg-gray-200 rounded-lg shadow-md text-center">
         <i class="bx bxs-pencil text-6xl text-blue-600 mb-4"></i>
         <h4 class="text-xl font-semibold mb-2">Easy Task Management</h4>
         <p class="text-lg">Quickly add, edit, and organize your tasks in a few clicks.</p>
       </div>
-      <div class="p-6 bg-gray-100 rounded-lg shadow-md text-center">
+      <div class="p-6 bg-gray-200 rounded-lg shadow-md text-center">
         <i class="bx bxs-bar-chart-alt-2 text-6xl text-green-600 mb-4"></i>
         <h4 class="text-xl font-semibold mb-2">Boost Your Productivity</h4>
         <p class="text-lg">Organize tasks by priority and stay on top of your goals.</p>
       </div>
-      <div class="p-6 bg-gray-100 rounded-lg shadow-md text-center">
+      <div class="p-6 bg-gray-200 rounded-lg shadow-md text-center">
         <i class="bx bxs-calendar-check text-6xl text-red-600 mb-4"></i>
         <h4 class="text-xl font-semibold mb-2">Track Progress</h4>
         <p class="text-lg">Easily monitor your progress by updating the status of each task.</p>
