@@ -81,10 +81,12 @@ function editTask(icon) {
   const taskPriority = currentTaskItem.querySelector(".task-priority").innerText.split(": ")[1];
   const taskDueDate = currentTaskItem.querySelector(".task-due-date").innerText.split(": ")[1];
   const taskDescription = currentTaskItem.querySelector(".task-description").innerText;
+  const taskStatus = currentTaskItem.parentElement.id.replace("List", "");
 
   document.getElementById("taskInput").value = taskName;
   document.getElementById("prioritySelect").value = taskPriority;
   document.getElementById("dueDateInput").value = taskDueDate;
+  document.getElementById("statusSelect").value = taskStatus;
   document.getElementById("description").value = taskDescription;
 
   togglePopup();
@@ -100,7 +102,7 @@ function moveTaskToList(taskItem, status) {
   const lists = {
     todo: "todoList",
     inProgress: "inProgressList",
-    completed: "completedList"
+    completed: "completedList",
   };
   document.getElementById(lists[status]).appendChild(taskItem);
   updateCounters();
