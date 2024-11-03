@@ -1,18 +1,16 @@
-function toggleMenu() {
-  const mobileMenu = document.getElementById("mobileMenu");
-  mobileMenu.classList.toggle("translate-x-full");
-}
-function toggleMenu() {
-  const menu = document.getElementById('mobileMenu');
-  menu.classList.toggle('translate-x-full'); 
-}
-
 let currentTaskItem = null;
 const priorityColors = {
   P1: "bg-red-400",
   P2: "bg-orange-400",
   P3: "bg-green-400",
 };
+
+function toggleMenu() {
+  const mobileMenu = document.getElementById("mobileMenu");
+  if (mobileMenu) {
+    mobileMenu.classList.toggle("translate-x-full");
+  }
+}
 
 function togglePopup() {
   document.getElementById("popup").classList.toggle("hidden");
@@ -25,7 +23,7 @@ function addTask() {
   const statusSelect = document.getElementById("statusSelect").value;
   const descriptionInput = document.getElementById("description").value;
 
-  if (taskInput === "" || prioritySelect === "" || dueDateInput === "" || descriptionInput === "") {
+  if (!taskInput || !prioritySelect || !dueDateInput || !descriptionInput) {
     alert("Enter a task and select its priority and date!");
     return false;
   }
@@ -38,8 +36,8 @@ function addTask() {
 
   if (currentTaskItem) {
     currentTaskItem.querySelector(".task-name").innerText = taskInput;
-    currentTaskItem.querySelector(".task-priority").innerText = prioritySelect;
-    currentTaskItem.querySelector(".task-due-date").innerText = dueDateInput;
+    currentTaskItem.querySelector(".task-priority").innerText = `Priority: ${prioritySelect}`;
+    currentTaskItem.querySelector(".task-due-date").innerText = `Due Date: ${dueDateInput}`;
     currentTaskItem.querySelector(".task-description").innerText = descriptionInput;
     currentTaskItem.className = `p-2 rounded-md shadow-md flex justify-between items-center ${priorityColors[prioritySelect]}`;
     moveTaskToList(currentTaskItem, statusSelect);
@@ -95,6 +93,7 @@ function editTask(icon) {
 function removeTask(icon) {
   const taskItem = icon.closest("li");
   taskItem.remove();
+  updateCounters();
 }
 
 function moveTaskToList(taskItem, status) {
@@ -104,10 +103,11 @@ function moveTaskToList(taskItem, status) {
     completed: "completedList"
   };
   document.getElementById(lists[status]).appendChild(taskItem);
+  updateCounters();
 }
-function toggleMenu() {
-  const mobileMenu = document.getElementById("mobileMenu");
-  if (mobileMenu) {
-    mobileMenu.classList.toggle("translate-x-full");
-  }
+
+function updateCounters() {
+  document.getElementById("todoCount").innerText = `(${document.getElementById("todoList").childElementCount})`;
+  document.getElementById("inProgressCount").innerText = `(${document.getElementById("inProgressList").childElementCount})`;
+  document.getElementById("completedCount").innerText = `(${document.getElementById("completedList").childElementCount})`;
 }

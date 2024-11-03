@@ -86,32 +86,32 @@
         <button onclick="togglePopup()" class="w-full p-2 rounded-md mt-2 text-gray-500 border border-gray-300 hover:bg-gray-200 transition duration-200">Cancel</button>
       </div>
     </div>
-
-    <div class="flex justify-center mt-8 flex-wrap gap-4">
+    <div class="flex justify-center mt-8 flex-wrap gap-4 mx-4"> <!-- Added mx-4 for horizontal margin -->
       <div class="bg-gray-400 w-full sm:w-80 min-h-48 p-4 shadow-lg rounded-lg overflow-y-auto">
         <div class="flex justify-between items-center mb-4">
-          <h3 class="text-2xl font-semibold text-white">To Do</h3>
+          <h3 class="text-2xl font-semibold text-white">To Do <span id="todoCount">(0)</span></h3>
           <img class="w-11 h-14" src="img/start.png" alt="">
         </div>
         <ul id="todoList" class="space-y-2"></ul>
       </div>
-
+    
       <div class="bg-gray-400 w-full sm:w-80 min-h-48 p-4 shadow-lg rounded-lg overflow-y-auto">
         <div class="flex justify-between items-center mb-4">
-          <h3 class="text-2xl font-semibold text-white">In Progress</h3>
+          <h3 class="text-2xl font-semibold text-white">In Progress <span id="inProgressCount">(0)</span></h3>
           <img class="w-11 h-14" src="img/progress.png" alt="">
         </div>
         <ul id="inProgressList" class="space-y-2"></ul>
       </div>
-
+    
       <div class="bg-gray-400 w-full sm:w-80 min-h-48 p-4 shadow-lg rounded-lg overflow-y-auto">
         <div class="flex justify-between items-center mb-4">
-          <h3 class="text-2xl font-semibold text-white">Completed</h3>
+          <h3 class="text-2xl font-semibold text-white">Completed <span id="completedCount">(0)</span></h3>
           <img class="w-11 h-14" src="img/done.png" alt="">
         </div>
         <ul id="completedList" class="space-y-2"></ul>
       </div>
     </div>
+    
   </main>
 
   <!-- Footer -->
