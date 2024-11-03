@@ -5,6 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.7/css/boxicons.min.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .animate-fadeIn {
+        animation: fadeIn 0.3s forwards;
+    }
+    
+    .animate-fadeOut {
+        animation: fadeOut 0.3s forwards;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+    }
+    
+    .animate-slideIn {
+        animation: slideIn 0.3s forwards;
+    }
+    
+    .animate-slideOut {
+        animation: slideOut 0.3s forwards;
+    }
+    
+    @keyframes slideIn {
+        from { transform: translateX(-20px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    
+    @keyframes slideOut {
+        from { transform: translateX(0); opacity: 1; }
+        to { transform: translateX(20px); opacity: 0; }
+    }
+    </style>
   <title>To-Do List</title>
 </head>
 <body class="bg-gray-100 flex flex-col min-h-screen">
@@ -114,7 +151,7 @@
     
   </main>
 
-  <footer class="bg-gray-900 text-white text-center h-72 mt-10 py-6 text-2xl flex items-center">
+  <footer class="bg-gray-900 text-white text-center h-72 mt-20 py-6 text-2xl flex items-center">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-center space-x-4 mb-4">
         <a href="#" class="hover:text-gray-300"><i class="bx bxl-facebook-square text-2xl"></i></a>
