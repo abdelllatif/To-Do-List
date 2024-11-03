@@ -11,5 +11,5 @@ Une application de liste de tâches simple et intuitive basée sur le web qui pe
 ## Les utils de travaille
 - **HTML** : Structure de l'application.
 - **CSS** : Tailwind CSS pour le style.
-- **JavaScript** : Pour les fonctionnalités dynamiques comme l'ajout de tâches et la bascule des menus.
+- **JavaScript** : Pour les fonctionnalités dynamiques comme l'ajout de tâches.
 - **Boxicons** : Pour les icônes utilisées dans la navigation et les boutons.
